@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital India 2047</title>
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #0b0b0d;
+      color: #f0f0f0;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    /* Hero Section */
+    header {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: url('Images/india.jpg') no-repeat center/cover;
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+    }
+
+    header h1, header p {
+      z-index: 1;
+      animation: fadeInUp 2s ease forwards;
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      color: #00e0ff;
+      text-shadow: 0 0 20px #00e0ff;
+    }
+
+    header p {
+      margin-top: 15px;
+      font-size: 1.3rem;
+      color: #ffcc00;
+      text-shadow: 0 0 15px #ffcc00;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 80px 10%;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      color: #00e0ff;
+      text-shadow: 0 0 15px #00e0ff;
+      animation: glow 3s infinite alternate;
+    }
+
+    .vision, .future-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    /* Futuristic Cards */
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 20px;
+      border: 1px solid rgba(0,224,255,0.3);
+      box-shadow: 0 0 20px rgba(0,224,255,0.2);
+      backdrop-filter: blur(8px);
+      transition: all 0.4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0 0 30px rgba(0,224,255,0.6);
+    }
+
+    .card h3 {
+      color: #ffcc00;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px #ffcc00;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      padding: 25px;
+      text-align: center;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00e0ff; }
+      to { text-shadow: 0 0 25px #00e0ff, 0 0 40px #00e0ff; }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      header p { font-size: 1rem; }
+      section { padding: 60px 5%; }
+      .card { padding: 20px; }
+    }
+
+    @media (max-width: 480px) {
+      header h1 { font-size: 1.8rem; }
+      header p { font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header>
+    <h1>Digital India 2047</h1>
+    <p>100 Years of Independence • A Future Empowered by Technology</p>
+  </header>
+
+  <!-- Vision Section -->
+  <section id="vision">
+    <h2>Vision & Mission</h2>
+    <div class="vision">
+      <div class="card">
+        <h3>Vision</h3>
+        <p>To create a transparent, efficient and citizen-first governance ecosystem, driven by Artificial Intelligence, 6G networks, blockchain, and inclusive digital institutions.</p>
+      </div>
+      <div class="card">
+        <h3>Mission</h3>
+        <p>To transform governance by moving from digitization to full-scale digital transformation, ensuring pro-active, data-driven, and ethical governance accessible to all.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Future Section -->
+  <section id="future">
+    <h2>Future of Governance</h2>
+    <div class="future-grid">
+      <div class="card">
+        <h3>AI & Automation</h3>
+        <p>Next-gen policy making with AI & ML to predict citizen needs and ensure efficient service delivery.</p>
+      </div>
+      <div class="card">
+        <h3>6G Connectivity</h3>
+        <p>Seamless high-speed digital access enabling 1000+ citizen-centric services instantly.</p>
+      </div>
+      <div class="card">
+        <h3>Blockchain Institutions</h3>
+        <p>Transparent, tamper-proof governance through blockchain-based systems for trust and accountability.</p>
+      </div>
+      <div class="card">
+        <h3>Citizen First</h3>
+        <p>One Nation – One Portal: A unified digital platform ensuring smooth grievance redressal & feedback.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Youth & Innovation -->
+  <section id="youth">
+    <h2>Youth & Innovation</h2>
+    <p>India@2047 thrives on the creativity of young civil servants, entrepreneurs, and innovators.  
+    Future governance will be powered by collaborative projects across sectors like HealthTech, FinTech, Education, Sustainability, and Digital Security.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© Government of India | Vision India@2047 | Digital Transformation</p>
+  </footer>
+
+</body>
+</html>
